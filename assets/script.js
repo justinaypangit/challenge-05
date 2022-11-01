@@ -31,4 +31,17 @@ text.each(function () {
         $(this).removeClass('past');
     }
 });
+
+function saveAgenda () {
+    var rowHour = $(this).siblings('.hour').text();
+    var agenda = $(this).siblings('.text').val();
+
+    if (agenda === "") {
+        localStorage.setItem(rowHour, "");
+    }
+
+    else {
+        localStorage.setItem(rowHour, agenda);
+    }
+}
 // try refresh to check if working
