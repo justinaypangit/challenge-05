@@ -18,7 +18,17 @@ text.each(function () {
         $(this).removeClass('future');
         $(this).removeClass('past');
     }
-}
 
-)
+    else if (timeBlocks < hour) {
+        $(this).addClass('past');
+        $(this).removeClass('now');
+        $(this).removeClass('future');
+    }
+
+    else {
+        $(this).addClass('future');
+        $(this).removeClass('now');
+        $(this).removeClass('past');
+    }
+});
 // try refresh to check if working
